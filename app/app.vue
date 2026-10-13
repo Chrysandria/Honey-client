@@ -2,11 +2,9 @@
   <div>
     <NuxtRouteAnnouncer />
     <UApp>
-    	<UHeader title="Honey groupe">
-        <template #right>
-          <UColorModeSelect />
-        </template>
-      </UHeader>
+      <NuxtLayout>
+        <NuxtPage/>
+      </NuxtLayout>
     </UApp>
   </div>
 </template>
