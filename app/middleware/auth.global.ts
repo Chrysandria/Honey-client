@@ -7,7 +7,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
 
   const isPublicRoute = ['/', '/login', '/register'].includes(to.path)
 
-  if (store.isLoggedIn && (to.path === '/login' || to.path === '/register')) {
+  if (store.isLoggedIn && isPublicRoute) {
     return navigateTo('/features', { replace: true })
   }
 
